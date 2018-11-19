@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../css/cart.css">
+	<style type="text/css">
+		ul{
+			width: 1088px;
+			margin: 0 auto;
+		}
+		ul p{
+			float: left;
+		}
+		ul .prolist-single{
+			height: 110px;
+			border-bottom: 1px dashed #eeeeee;
+			background: #fff;
+		}
+		ul .prolist-single .checkbox{
+			width: 54px;
+			padding-left: 20px;
+			margin-top: 43px;
+			text-align: right;
+			float:left;
+			
+		}
+		ul .prolist-single .checkbox a{
+			margin-left: 9px;
+		    display: block;
+		    height: 24px;
+		    background: url("../images/check.png") no-repeat;
+		}
+		.cancel{
+			 background: url("../images/cancel-check.png")!important;
+		}
+		.cancel-all{
+			 background: url("../images/cancel-check.png") no-repeat!important;
+		}
+		.pic{
+			width: 73px;
+			height: 73px;
+			float: left;
+			margin-left: 74px;
+			margin-top: 15px;
+		}
+		.pic img{
+			width: 73px;
+			height: 73px;
+			border: 1px solid #eeeeee;
+		}
+		.name{
+			width: 230px;
+			font-size: 14px;
+			margin-top: 41px;
+			margin-left: 26px;
+		}
+		.name span{
+			display: block;
+			font-size: 13px;
+			color: #b0b0b0;
+		}
+		.price{
+			width: 50px;
+			margin-left: 110px;
+			margin-top: 41px;
+			font-size:14px;
+		}
+		
+		.num-input{
+			width: 111px;
+			height: 35px;
+			margin-left: 32px;
+			margin-top: 36px;
+			float: left;
+		}
+		
+		.num-input input{
+			text-align: center;
+			width: 48px;
+			height: 30px;
+			float: left;
+			border: none;
+			color: #777777;
+		}
+		.num-input a{
+			display: inline-block;
+			float: left;
+			width: 26px;
+			height: 30px;
+			background: #ededed;
+		}
+		.num-input .minus{
+			display: inline-block;
+			width: 26px;
+			height: 30px;
+			background: url("../images/-.png") no-repeat center center;
+		}
+		.num-input .add{
+			display: inline-block;
+			width: 26px;
+			height: 30px;
+			background: url("../images/+.png") no-repeat center center;
+		}
+		.xiaoji{
+			width: 30px;
+			font-size: 14px;
+			color: red;
+			margin-top: 40px;
+			margin-left: 40px;
+		}
+		.activity{
+			width: 186px;
+			height: 20px;
+			margin-left: 30px;
+		}
+		.del{
+			margin-top: 40px;
+
+		}
+		.del img{
+			width: 16px;
+			height: 16px;
+			margin-left: 1px;
+		}
+	</style>
+</head>
+<body>
+	<header></header>
+	<div class="cart">
+		<div class="cart-content">
+			<p class="cart-title">首页 > <span>购物车</span></p>
+			<div class="cart-table">
+				<div class="cheader">
+					<p class="checkbox"><a href="javascript:;" class="bigcheck"></a></p>
+					<div class="cright">
+						<span class="all">全选</span>
+						<span class="pinformation">商品信息</span>
+						<span class="pprice">单价</span>
+						<span class="pnum">数量</span>
+						<span class="pallnum">小计</span>
+						<span class="activity">活动</span>
+					</div>
+				</div>
+				<div class="ac">
+					<img src="../images/cart-empty.png" alt="购物车还是空的~">
+				</div>
+				<div class="cinfo">
+					<ul class="cartall">
+						<script type="text/html" id="pro-template">
+							{{each products item i}}
+								<div class="prolist-single">
+									<p class="checkbox"><a href="javascript:;" class="smallcheck"></a></p>
+									<div class="pic"><img class="img-id" src="{{ item.img }}" alt="{{item.id}}"></div>
+									<p class="name">{{ item.name }}<span>{{item.desc}}</span></p>
+									<p class="price"><span>￥{{ item.price }}</span></p>
+									<div class="num-input">
+										<a href="javascript:;" title="减一" ><i class="minus"></i></a>
+										<input type="text" value="{{item.num}}" title="请输入购买量" class="input-num">
+										<a href="javascript:;" title="加一" ><i class="add"></i></a>
+									</div>
+									<p class="xiaoji">￥<span class="xj-price">{{item.price*item.num}}</span></p>
+									<p class="activity"></p>
+									<p class="del"><img src="../images/del.png" alt="删除"></p>
+								</div>
+							{{/each}}
+							</script>
+					</ul>
+					<div class="cfooter">
+						<p class="checkbox"></p>
+						<p class="batch-op"><a href="javascript:;" class="all-del"></a>
+						</p>
+						<p class="allprice">
+							<span class="sprice s1">应付总额：￥<span class="n1 zj">158.00</span></span>
+							<span class="sprice s2">商品合计：￥<span class="n2 zj">158.00</span></span>
+						</p>
+						<p class="order">下单</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer></footer>
+	</div>
+	<script type="text/javascript" src="/libs/require/require.js" data-main="/js/cart.js"></script>
+</body>
+</html>

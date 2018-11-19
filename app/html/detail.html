@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../css/detail.css">
+	<style type="text/css">
+		.product{
+			width: 1088px;
+			background:#fff;
+			overflow: hidden;
+			margin-top: 20px;
+		}
+		.product .p-left{
+			width: 500px;
+			height:500px;
+			margin-top:20px;
+			float: left;
+			
+		}
+		.product .p-left .images{
+			width:500px;
+			height:500px;
+			float:left;
+			padding-top: 30px;
+		}
+		.product .p-left .images .bigImage{
+			width:400px;
+			float:left;
+		}
+		.product .p-left .images .smallImages{
+			width:72px;
+			float:right;
+		}
+		.product .p-left .images .bigImage img{
+			width:400px;
+			height:400px;
+		}
+		.product .p-left .images .smallImages img{
+			width:72px;
+			height:72px;
+			margin-bottom: 6px;
+			background: #f4f4f4;
+		}
+		.product .p-right{
+			float: right;
+			width: 500px;
+			margin-left: 50px;
+		}
+		.product .p-right .desc{
+			width: 500px;
+			height: 171px;
+			border-bottom: 1px dashed #f1f1f1;
+		}
+		.product .p-right .desc h3{
+			margin-top: 20px;
+		}
+		.product .p-right .info{
+			padding: 5px 0;
+		}
+		.product .p-right .desc .des{
+			padding: 5px 0;
+			font-size: 13px;
+			color: #999999;
+		}
+		.product .p-right .pSale{
+			width: 490px;
+			height: 85px;
+			background-color: #f5f6f6;
+			margin: 10px 0;
+			padding-left: 10px;
+			color: #999;
+			display: inline-block;
+		}
+		.pSale .pPrice{
+			width: 180px;
+			height: 45px;
+			font-size: 15px;
+		}
+		.pSale .pPrice span{
+			color: red;
+		}
+		.pSale .pPrice .price{
+			font-size: 30px;
+			color: red;
+		}
+		.pSale p{
+			font-size: 15px;
+		}
+		.actions{
+			width: 500px;
+			height: 171px;
+			margin-top: 24px;
+		}
+		.actions .specs{
+			width: 490px;
+			height: 51px;
+
+		}
+		.actions .specs .specLabel{
+			width: 60px;
+			float: left;
+			padding-top: 12px;
+			font-size:14px;
+		}
+		.actions .specs .specBlocks{
+			width: 102px;
+			height: 31px;
+			line-height: 30px;
+			text-align: center;
+			border: 1px solid #00aeff;
+			margin:5px 10px;
+			float: left;
+			font-size:14px;
+			position: relative;
+			color: #00aeff;
+		}
+		.actions .specs .specBlocks .icon{
+			background: url("../images/xiabiao.png") no-repeat;
+			width: 21px;
+			height: 21px;
+			position: absolute;
+			z-index: 999;
+			right: 0;
+			bottom: 0;
+		}
+		.actions .num .num-input{
+			width: 111px;
+			height: 35px;
+			padding-left: 11px;
+			padding-top: 5px;
+			float: left;
+		}
+		
+		.actions .num .num-input input{
+			text-align: center;
+			width: 48px;
+			height: 30px;
+			float: left;
+			border: none;
+			color: #777777;
+		}
+		.actions .num .num-input a{
+			display: inline-block;
+			float: left;
+			width: 26px;
+			height: 30px;
+			background: #ededed;
+		}
+		.actions .num .num-input .minus{
+			display: inline-block;
+			width: 26px;
+			height: 30px;
+			background: url("../images/-.png") no-repeat center center;
+		}
+		.actions .num .num-input .add{
+			display: inline-block;
+			width: 26px;
+			height: 30px;
+			background: url("../images/+.png") no-repeat center center;
+		}
+		.actions .action{
+			width: 500px;
+			height: 57px;
+			margin: 10px 0;
+		}
+		.actions .action .btns{
+			width: 378px;
+			height: 42px;
+		}
+		.actions .action .btns .common1{
+			height: 40px;
+		    width: 168px;
+		    font-size: 18px;
+		    line-height: 40px;
+		    display: inline-block;
+		    text-align: center;
+		    background-color: #00aeff;
+		    color: #fff;
+		    margin-right: 20px;
+		    border-radius: 3px;
+		    float: left;
+		}
+		.actions .action .btns .common2{
+			background-color: #fff;
+		    color: #00aeff;
+		    border: 1px solid #00aeff;
+		    height: 40px;
+		    width: 168px;
+		    font-size: 18px;
+		    line-height: 40px;
+		    display: inline-block;
+		    float: left;
+		    text-align: center;
+		    margin-right: 20px;
+		    border-radius: 3px;
+		}
+	</style>
+</head>
+<body>
+<div class="detail">
+	<header></header>
+	<div class="detail-container">
+		<div class="detail-content">
+			<p class="detail-title">
+				首页 > 居家生活 > 水杯 >
+				<span>魔兽世界部落徽记 啤酒杯</span>
+			</p>
+			<div class="product" id="detail">
+				<script type="text/html" id="detail-template">
+					<div class="p-left">
+						<div class="images">
+							<div class="bigImage"><img class="img-change" src="{{product.img_1}}"></div>
+							<div class="smallImages">
+								<img class="img-hover img1" src="{{product.img_1}}" alt="{{product.id}}"> 
+								<img class="img-hover" src="{{product.img_2}}">
+								<img class="img-hover" src="{{product.img_3}}">
+								<img class="img-hover" src="{{product.img_4}}">
+								<img class="img-hover" src="{{product.img_5}}">
+							</div>
+						</div>
+					</div>
+					<div class="p-right">
+						<div class="desc">
+							<h3 class="name info">{{product.name}}</h3>
+							<p class="des info">{{product.description}}</p>
+							<div class="pSale">
+								<div class="pPrice info">
+									售价：<span>￥</span>
+									<span class="price info">{{product.price}}</span>
+								</div>
+								<p class="info">服务：&nbsp;&nbsp;&nbsp;全场满88包邮&nbsp;&nbsp;&nbsp;部分地区无法配送</p>
+							</div>
+						</div>
+						<div class="actions">
+							<div class="specs info">
+								<div class="specLabel">&nbsp;类型:</div>
+								<div class="specBlocks">
+									<span>部落啤酒杯</span>
+									<span class="icon"></span>
+								</div>
+							</div>
+							<div class="num specs info">
+								<div class="specLabel">&nbsp;数量:</div>
+								<div class="num-input">
+									<a href="javascript:;" title="减一" ><i class="minus"></i></a>
+									<input type="text" value="1" title="请输入购买量" class="input-num">
+									<a href="javascript:;" title="加一" ><i class="add"></i></a>
+								</div>
+							</div>
+							<div class="action info">
+								<div class="btns">
+									<a href="javascript:;" class="common1">立即购买</a>
+									<a href="javascript:;" class="common2">加入购物车</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</script>
+			</div>
+		</div>
+	</div>
+	<footer></footer>
+	<script type="text/javascript" src="/libs/require/require.js" data-main="/js/detail.js"></script>
+</div>
+</body>
+</html>

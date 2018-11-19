@@ -1,0 +1,53 @@
+@import "component/header.scss";
+@import "component/System.scss";
+@import "component/footer.scss";
+
+.detail{
+	width:100%;
+	background:url(../images/bg-content.png);
+	background-attachment: fixed;
+	background-size: 50%;
+	overflow: hidden;
+	.detail-content{
+		width: 1088px;
+		margin:0 auto;
+		.detail-title{
+			margin-top:24px;
+			font-size:14px;
+			height:15px;
+			span{
+				color:#00aeff;
+				font-size:13px;
+			}
+		}
+		// .product{
+		// 	width: 1088px;
+		// 	.p-left{
+		// 		width: 1088px;
+		// 		height:504px;
+		// 		margin-top:20px;
+		// 		float: left;
+		// 		background:#fff;
+		// 		.images{
+		// 			width:500px;
+		// 			height:500px;
+		// 			float:left;
+		// 			padding-top: 30px;
+		// 			.bigImage{
+		// 				width:400px;
+		// 				float:left;
+		// 			}
+		// 			.smallImages{
+		// 				width:72px;
+		// 				float:right;
+		// 				img{
+		// 					width:72px;
+		// 					height:72px;
+		// 				}
+		// 			}
+		// 		}
+		// 	}
+		// }
+	}
+	
+}

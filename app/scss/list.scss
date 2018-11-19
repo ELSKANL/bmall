@@ -1,0 +1,87 @@
+@import "component/header.scss";
+@import "component/footer.scss";
+@import "component/System.scss";
+
+.list{
+	background:url(../images/bg-content.png);
+	background-attachment: fixed;
+	background-size: 50%;
+	overflow: hidden;
+	.list-container{
+		width:100%;
+		.list-content{
+			width: 1088px;
+			margin:0 auto;
+			.allProducts{
+				margin-top:24px;
+				font-size:14px;
+				height:15px;
+				span{
+					color:#00aeff;
+					font-size:13px;
+				}
+			}
+			.title{
+				width:1088px;
+				height:178px;
+				background:#fff;
+				border:1px solid #e8e8e8;
+				margin-top:20px;
+				ul{
+					width:100%;
+					height:59px;
+					border-bottom:1px dashed #ebebeb;
+					li{
+						float:left;
+						height:59px;
+						line-height:59px;
+						padding-right:48px;
+						font-size:13px;
+						&:nth-child(1){
+							width:140px;
+							padding-right:50px;
+							text-align:right;
+							a{
+								color:#757575;
+							}
+						}
+						a{
+							color:#333333;
+						}
+					}
+				}
+				.ul-a{
+					li{
+						&:nth-child(2){
+							a{
+								color:#00b5ff;
+							}
+						}
+						
+					}
+				}
+				.ul-b{
+					li{
+						&:nth-child(3){
+							a{
+								color:#00b5ff;
+							}
+						}
+					}
+				}
+				.ul-c{
+					li{
+						&:nth-child(8){
+							a{
+								color:#00b5ff;
+							}
+						}	
+					}
+				}
+			}
+			#products{
+				margin-top:26px;
+			}
+		}
+	}
+}

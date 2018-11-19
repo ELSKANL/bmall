@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../css/list.css">
+	<style>
+		.prolist-single{
+			width: 252px;
+			height:298px;
+			background: #fff;
+			float: left;
+			margin:0 10px 16px;
+			text-align: center;
+			border: 1px solid #e8e8e8;
+		}
+		.prolist-single .pic{
+			width: 210px;
+			height:210px;
+			margin-left: 20px;
+			margin-top: 8px;
+		}
+		.prolist-single .name{
+			margin-top: 8px;
+			font-size: 13px;
+			color: #333333;
+		}
+		.prolist-single .price{
+			margin-top: 8px;
+			font-size: 13px;
+			color: #b3b3b3;
+		}
+		.prolist-single .price span{
+			color: #ea0012;
+		}
+		.prolist-single a{
+			
+			font-size: 13px;
+			color: #b3b3b3;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="list">
+		<header></header>
+		<div class="list-container">
+			<div class="list-content">
+				<p class="allProducts">
+					全部商品 >
+					<span>商品筛选</span>
+				</p>
+				<div class="title">
+					<ul class="ul-a">
+						<li><a href="#">游戏</a></li>
+						<li><a href="#">全部</a></li>
+						<li><a href="#">魔兽世界</a></li>
+						<li><a href="#">守望先锋</a></li>
+						<li><a href="#">暗黑破坏神</a></li>
+						<li><a href="#">炉石传说</a></li>
+						<li><a href="#">星际争霸2</a></li>
+						<li><a href="#">风暴英雄</a></li>
+						<li><a href="#">暴雪英雄</a></li>
+					</ul>
+					<ul class="ul-b">
+						<li><a href="#">商品类别</a></li>
+						<li><a href="#">全部</a></li>
+						<li><a href="#">居家世界</a></li>
+						<li><a href="#">手办模型</a></li>
+						<li><a href="#">数码外设</a></li>
+						<li><a href="#">配饰挂件</a></li>
+						<li><a href="#">服装服饰</a></li>
+						<li><a href="#">图书文具</a></li>
+					</ul>
+					<ul class="ul-c">
+						<li><a href="#"></a></li>
+						<li><a href="#">全部</a></li>
+						<li><a href="#">洗护</a></li>
+						<li><a href="#">抱枕</a></li>
+						<li><a href="#">床品</a></li>
+						<li><a href="#">收纳</a></li>
+						<li><a href="#">拖鞋</a></li>
+						<li><a href="#">水杯</a></li>
+						<li><a href="#">家饰</a></li>
+						<li><a href="#">箱包</a></li>
+						<li><a href="#">餐厨</a></li>
+						<li><a href="#">雨伞</a></li>
+					</ul>
+				</div>
+				<div id="products">
+					<ul id="proList"></ul>
+						<script type="text/html" id="pro-template">
+						{{each products item i}}
+							<div class="prolist-single">
+								<div class="pic"><img src="{{ item.img }}" alt=""></div>
+								<p class="name">{{ item.name }}</p>
+								<p class="price">商城价：<span>￥{{ item.price }}</span></p>
+								
+								<a href="/html/detail.html?id={{ item.id }}">查看详情</a>
+							</div>
+						{{/each}}
+						</script>
+				</div>
+			</div>
+		</div>
+		<footer></footer>
+	</div>
+	<script type="text/javascript" src="/libs/require/require.js" data-main="/js/list.js"></script>
+</body>
+</html>

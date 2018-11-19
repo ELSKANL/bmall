@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="/css/register.css">
+</head>
+<body>
+	<div class="register">
+		<div class="regidter-container">
+			<div class="r-hd">
+				<div class="r-left"></div>
+				<div class="r-right">
+					已有账号？去<a href="/html/login.html">登录</a>
+				</div>
+			</div>
+			<div class="r-content">
+				<p class="choice">
+					<a href="#" class="c-a">普通账号注册</a>
+					<a href="#" class="c-b">靓号注册</a>
+				</p>
+				<form>
+					<div class="u-input">
+						<label class="u-label">账号：</label>
+						<input type="text" name="email" id="email" placeholder="网易邮箱/其他邮箱" class="i-register" >
+						<span id="s-email" class="s-email">请输入正确的邮箱格式</span>
+						<!-- <input type="text" placeholder="" class="ac"> -->
+					</div>
+					<div class="u-input">
+						<label class="u-label">密码：</label>
+						<input type="password" name="pwd" id="pwd" placeholder="6-16位字母数字组合的密码 " class="i-register">
+						<span id="s-pwd" class="s-pwd">请输入由6-16位字母数字组合的密码</span>
+						<!-- <input type="text" placeholder="请输入由6-16位的密码" > -->
+					</div>
+					<div class="u-input">
+						<label class="u-label">确认密码：</label>
+						<input type="password" name="rpwd" placeholder="再次输入密码" class="i-register" id="rpwd">
+						<span id="s-rpwd" class="s-rpwd">请重新输入一样的密码</span>
+					</div>
+					<div class="u-input">
+						<label class="u-label">手机号：</label>
+						<input type="text" name="phone" id="phone" placeholder="11位手机号" class="i-register">
+					</div>
+					<button>注&nbsp;&nbsp;册</button>
+				</form>
+				<p class="banner">
+					<a href="#">
+						<img src="../images/banner.png">
+					</a>
+				</p>
+			</div>
+			<div class="r-bottom">
+				<p>
+					<a href="http://corp.163.com/eng/about/overview.html" target="_blank">About NetEase</a>
+					-
+					<a href="http://gb.corp.163.com/gb/about/overview.html" target="_blank">公司简介</a>
+					-
+					<a href="http://gb.corp.163.com/gb/contactus.html" target="_blank">联系方式</a>
+					-
+					<a href="http://reg.163.com/help/help_oauth2.html?v=20141215" target="_blank">OAuth2.0认证</a>
+					-
+					<a href="http://corp.163.com/gb/job/job.html" target="_blank">招聘信息</a>
+					-
+					<a href="http://help.163.com/" target="_blank">客户服务</a>
+					-
+					<a href="http://gb.corp.163.com/gb/legal.html" target="_blank">相关法律</a>
+					-
+					<a href="http://emarketing.biz.163.com/" target="_blank">网络营销</a>
+				</p>
+				<p>网易公司版权所有 ©1997-2018</p>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="/libs/require/require.js" data-main="/js/register.js"></script>
+</body>
+</html>
